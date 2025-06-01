@@ -27,7 +27,7 @@ function Movies(props) {
     
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=57290a21de804af1800e23365f2bf079&language=en-US&page=${pageNo}`
+        `https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY&language=en-US&page=${pageNo}`
       )
       .then(function (res) {
         setMovies(res.data.results);
