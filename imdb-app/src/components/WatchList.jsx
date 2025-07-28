@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import genreids from '../Utility/genre'
+import './WatchList.css'
 
 function WatchList(props) {
   const [search, setSearch] = useState("");
@@ -38,7 +39,7 @@ function WatchList(props) {
 
   return (
     <>
-      <div className="flex justify-center flex-wrap m-8">
+      <div className="flex justify-center flex-wrap m-8 gap-6">
         {genreList.map((genre) => {
             return <div onClick={()=>handleFilter(genre)} className={ currGenre==genre ? "flex justify-center items-center text-white font-bold rounded-xl mx-4 h-[3rem] w-[10rem] bg-yellow-500" : "flex justify-center items-center text-white font-bold rounded-xl mx-4 h-[3rem] w-[10rem] bg-gray-200" }>
             {genre}
@@ -59,7 +60,7 @@ function WatchList(props) {
       </div>
 
       <div className="rounded-lg overflow-hidden mx-8 p-4 border border-gray-300">
-        <table className="w-full text-center text-gray-500">
+        <table className="table-div w-full text-center text-gray-500">
           <thead className="border-b-4">
             <tr>
               <th>Name</th>
@@ -74,7 +75,7 @@ function WatchList(props) {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="table-body" >
             {props.watchList.filter((movieObj)=>{
                 if(currGenre=='All Genres'){
                     return true
@@ -90,7 +91,7 @@ function WatchList(props) {
                   <tr key={movieObj.id} className="border-b-2">
                       <td className="flex items-center px-4 py-3">
                           <img
-                              className="w-[8rem] h-auto"
+                              className="table-img w-[8rem] h-auto"
                               src={`https://image.tmdb.org/t/p/original/${movieObj.backdrop_path}`}
                               alt={movieObj.title} />
                           <div className="mx-12 font-copper">{movieObj.title}</div>

@@ -1,0 +1,13 @@
+@media(min-width:200px) and (max-width:767px){
+    .movie-card {
+        width: 45%;
+        height: 30vh;
+    }
+    .movie-title {
+        font-size: 10px;
+        height: 20%;
+    }
+    .heart {
+        margin: 10px;
+    }
+}

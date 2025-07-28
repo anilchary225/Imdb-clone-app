@@ -1,4 +1,5 @@
 import React from "react";
+import './MovieCard.css'
 
 function MovieCard(props) {
   function doesContain() {
@@ -18,7 +19,7 @@ function MovieCard(props) {
   }
   return (
     <div
-      className="h-[50vh] w-[280px] bg-center bg-cover rounded-xl hover:scale-110 duration-300 hover:cursor-pointer flex flex-row justify-end relative overflow-hidden"
+      className="movie-card h-[50vh] w-[280px] bg-center bg-cover rounded-xl hover:scale-110 duration-300 hover:cursor-pointer flex flex-row justify-end relative overflow-hidden"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${props.poster_path})`,
       }}
@@ -26,20 +27,20 @@ function MovieCard(props) {
       {doesContain(props.movieObj) ? (
         <div
           onClick={() => props.handleRemoveFromWatchList(props.movieObj)}
-          className="m-6 rounded-lg flex justify-center h-8 w-8 text-xl items-center bg-gray-600/60"
+          className="heart m-6 rounded-lg flex justify-center h-8 w-8 text-xl items-center bg-gray-600/60"
         >
           &#10084;
         </div>
       ) : (
         <div
           onClick={() => props.handleAddtoWatchList(props.movieObj)}
-          className="m-6 rounded-lg flex justify-center h-8 w-8 text-xl items-center bg-gray-600/60"
+          className="heart m-6 rounded-lg flex justify-center h-8 w-8 text-xl items-center bg-gray-600/60"
         >
           &#9825;
         </div>
       )}
 
-      <div className="absolute bottom-0 w-full text-white text-lg text-center bg-blue-900/70 p-3 font-copper">
+      <div className="movie-title absolute bottom-0 w-full text-white text-lg text-center bg-blue-900/70 p-3 font-copper">
         {props.name}
       </div>
     </div>
