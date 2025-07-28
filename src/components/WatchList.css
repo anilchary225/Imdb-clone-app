@@ -1,3 +1,9 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 @media(min-width:200px) and (max-width:767px){
     .table-div {
         width: 20%;
@@ -10,4 +16,5 @@
     .table-body {
         font-size: 10px;
     }
+    
 }
