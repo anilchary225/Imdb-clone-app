@@ -8,8 +8,16 @@ export default defineConfig({
     commonjsOptions: {
       include: [/node_modules/],
     },
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   optimizeDeps: {
     include: ['react-router-dom'],
+  },
+  define: {
+    global: 'globalThis',
   },
 })
