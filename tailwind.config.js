@@ -2,16 +2,13 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        copper: ['Copperplate', 'serif'],
-      },
-    },
+    extend: {},
   },
-  plugins: [],
-  plugins: [require('tailwind-scrollbar-hide')]
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar-hide'),
+  ],
 }
-

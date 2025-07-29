@@ -64,21 +64,23 @@ function WatchList(props) {
         />
       </div>
 
-      <div className="rounded-lg mx-4 my-6 border border-gray-300 overflow-x-auto">
-        <table className="min-w-full text-sm text-gray-500 text-center">
+      <div className="rounded-lg mx-4 my-6 border border-gray-300 overflow-x-auto max-w-full">
+        <table className="w-full text-sm text-gray-500 text-center whitespace-nowrap">
           <thead className="border-b-4 text-gray-700 bg-gray-100">
             <tr>
               <th className="px-4 py-3">Name</th>
-              <th className="px-4 py-3 flex justify-center items-center gap-2">
-                <i
-                  onClick={sortIncreasing}
-                  className="fa-solid fa-arrow-up cursor-pointer"
-                />
-                Rating
-                <i
-                  onClick={sortDecreasing}
-                  className="fa-solid fa-arrow-down cursor-pointer"
-                />
+              <th className="px-4 py-3">
+                <div className="flex justify-center items-center gap-2">
+                  <i
+                    onClick={sortIncreasing}
+                    className="fa-solid fa-arrow-up cursor-pointer"
+                  />
+                  Rating
+                  <i
+                    onClick={sortDecreasing}
+                    className="fa-solid fa-arrow-down cursor-pointer"
+                  />
+                </div>
               </th>
               <th className="px-4 py-3">Popularity</th>
               <th className="px-4 py-3">Genre</th>
