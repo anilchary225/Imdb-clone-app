@@ -35,7 +35,7 @@ function MovieCard(props) {
       )}
 
       <div className="movie-title absolute bottom-0 w-full text-white text-lg text-center bg-blue-900/70 p-3 font-copper">
-        {props.movieObj.name}
+        {props.movieObj.title}
       </div>
     </div>
   );
